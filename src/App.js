@@ -1,5 +1,11 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Home from "./pages/Home/Home";
+import News from "./pages/News/News";
 import GlobalStyles from "./styles/GlobalStyle";
 
 function App() {
@@ -8,9 +14,13 @@ function App() {
       <Router>
         <GlobalStyles />
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
+          <Route path="/news/:id">
+            <News />
+          </Route>
+          <Redirect to="/" />
         </Switch>
       </Router>
     </div>

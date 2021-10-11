@@ -1,12 +1,15 @@
 import React from "react";
 import { BsHeart, BsThreeDots } from "react-icons/bs";
+import { useHistory } from "react-router";
 import styled from "styled-components";
 import images from "../../imgs";
 
 const NewsCard = () => {
+  const history = useHistory();
+
   return (
     <>
-      <NewsCardStyles>
+      <NewsCardStyles onClick={() => history.push("/news/2498234904")}>
         <div className="card_group">
           <div className="inner_card_group">
             <h2>CNN News</h2>
