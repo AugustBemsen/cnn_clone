@@ -28,7 +28,13 @@ export default HomeBody;
 const HomeBodyStyles = styled.div`
   margin: 2rem 0;
   padding: 2.5rem;
+  @media screen and (max-width: 789px) {
+    padding: 1.5rem;
+  }
 
+  @media screen and (max-width: 450px) {
+    padding-top: 1rem;
+  }
   .news_group {
     margin-top: 2rem;
     display: grid;
@@ -36,8 +42,13 @@ const HomeBodyStyles = styled.div`
     grid-gap: 1rem;
     grid-auto-flow: dense;
     column-count: 2;
-    @media (max-width: 450px) {
+
+    @media screen and (max-width: 1024px) {
       grid-template-columns: 48% 48%;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 100%;
     }
   }
 
@@ -46,6 +57,11 @@ const HomeBodyStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 789px) {
+      margin-top: 3rem;
+    }
+
 
     button {
       width: 250px;

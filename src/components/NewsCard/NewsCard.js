@@ -73,6 +73,10 @@ const NewsCardStyles = styled.div`
   h2,
   h3 {
     font-size: 1.2rem;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1rem;
+     }
   }
 
   .inner_card_group {
@@ -104,6 +108,12 @@ const NewsCardStyles = styled.div`
       margin-top: 1.5rem;
       cursor: pointer;
       color: var(--grey-color);
+
+      @media screen and (max-width: 789px) {
+        margin-right: 0.8rem;
+        margin-top: 0.8rem;
+        font-size: 0.9rem;
+      }
     }
 
     .cate:last-child {

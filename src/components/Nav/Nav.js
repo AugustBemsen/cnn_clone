@@ -2,13 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { MdMenu } from "react-icons/md";
 import images from "../../imgs";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <>
       <NavStyles>
         <div>
-          <img src={images.cnn_logo} alt="cnn" />
+          <Link to="/">
+            <img src={images.cnn_logo} alt="cnn" />
+          </Link>
         </div>
         <div id="nav_cta">
           <button>
@@ -34,11 +37,26 @@ const NavStyles = styled.div`
   padding: 1rem 3rem;
   padding-left: 0;
 
+  @media screen and (max-width: 1024px) {
+    height: 7.5vh;
+    padding: 1rem;
+  }
+
   img {
     display: block;
     position: absolute;
     top: 0;
+    left: 0;
     width: 100px;
+    cursor: pointer;
+
+    @media screen and (max-width: 1025px) {
+      width: 120px;
+     }
+
+    @media screen and (max-width: 500px) {
+      width: 80px;
+    }
   }
 
   button {
@@ -51,6 +69,10 @@ const NavStyles = styled.div`
     font-size: 1.2rem;
     font-weight: 600;
     transition: all 0.3s ease-in-out;
+
+    @media screen and (max-width: 500px) {
+      margin-right: 1.3rem;
+    }
 
     span {
       width: 10px;

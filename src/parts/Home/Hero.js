@@ -50,24 +50,45 @@ const HeroStyles = styled.div`
   flex-direction: column;
   justify-content: flex-end;
 
+  @media screen and (max-width: 1024px) {
+    height: 40vh;
+  }
+
+  @media screen and (max-width: 769px) {
+    padding-bottom: 1rem;
+  }
+
+  @media screen and (max-width: 500px) { 
+    padding: 2rem;
+  }
+
   .hero_group {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2rem;
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 1rem;
+     }
   }
 
   svg {
-      cursor: pointer;
+    cursor: pointer;
   }
 
   .inner_group {
     display: flex;
     align-items: center;
 
-    p, svg {
+    p,
+    svg {
       font-size: 1.8rem;
       font-weight: 600;
+
+      @media screen and (max-width: 500px) {
+        font-size: 1.2rem;
+       }
     }
 
     span {
@@ -78,10 +99,16 @@ const HeroStyles = styled.div`
       background: rgba(0, 0, 0, 0.4);
       border-radius: 25px;
       margin-top: 2rem;
+
+      @media screen and (max-width: 500px) { 
+        font-size: 1rem;
+        padding: 0.7rem;
+        margin-top: 1.3rem;
+      }
     }
 
     svg {
-        margin-right: 1rem;
+      margin-right: 1rem;
     }
   }
 
@@ -89,14 +116,27 @@ const HeroStyles = styled.div`
     font-size: 2.5rem;
     margin-right: 2rem;
     font-weight: 600;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.5rem;
+      margin-right: 1.2rem;
+    }
   }
 
   #icon {
     font-size: 2.5rem;
+
+    @media screen and (max-width: 500px) { 
+      font-size: 1.5rem;
+    }
   }
 
   h3 {
     font-size: 2.3rem;
     font-weight: 900;
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.2rem;
+    }
   }
 `;
