@@ -7,10 +7,15 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    :root {
+        --white-color: #F5FAFF;
+        --text-color: #222831;
+    }
+
     body {
         font-family: 'Roboto', sans-serif;
-        background: #F5FAFF;
-        color: #222831;
+        background: var(--white-color);
+        color: var(--text-color);
     }
 
     a {
