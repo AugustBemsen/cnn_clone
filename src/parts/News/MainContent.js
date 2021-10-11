@@ -124,6 +124,10 @@ const NewsContentStyles = styled.div`
     height: 500px;
     overflow: hidden;
 
+    @media screen and (max-width: 789px) {
+      height: auto;
+    }
+
     img {
       width: 100%;
       object-fit: cover;
@@ -131,7 +135,9 @@ const NewsContentStyles = styled.div`
   }
 
   p {
-      margin-top: 2rem;
+    margin-top: 2rem;
+    @media screen and (max-width: 789px) {
+      margin-top: 1rem;
+    }
   }
-
 `;

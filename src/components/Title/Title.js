@@ -13,4 +13,8 @@ export default Title;
 const TitleStyles = styled.h2`
   font-size: 2rem;
   text-transform: capitalize;
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.4rem;
+   }
 `;

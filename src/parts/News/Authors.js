@@ -37,4 +37,12 @@ const AuthorsStyles = styled.p`
     cursor: pointer;
   }
 
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    margin-top: 1rem;
+    span {
+      margin-right: 0.4rem;
+      font-size: 0.89rem;
+    }
+  }
 `;
