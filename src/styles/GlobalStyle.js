@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
         --text-color: #222831;
         --blue-color: #1A014E;
         --red-color: #CA2026;
+        --grey-color: #9389AC
     }
 
     body {

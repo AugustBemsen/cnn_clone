@@ -1,0 +1,67 @@
+import React from "react";
+import styled from "styled-components";
+import NewsCard from "../../components/NewsCard/NewsCard";
+import Title from "../../components/Title/Title";
+
+const HomeBody = () => {
+  return (
+    <>
+      <HomeBodyStyles>
+        <Title children="Trending news" />
+        <div className="news_group">
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+          <NewsCard />
+        </div>
+        <div className="home_cta">
+          <button>View All</button>
+        </div>
+      </HomeBodyStyles>
+    </>
+  );
+};
+
+export default HomeBody;
+const HomeBodyStyles = styled.div`
+  margin: 2rem 0;
+  padding: 2.5rem;
+
+  .news_group {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+    column-count: 2;
+    @media (max-width: 450px) {
+      grid-template-columns: 48% 48%;
+    }
+  }
+
+  .home_cta {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 250px;
+      padding: 0.9rem 1.4rem;
+      color: var(--blue-color);
+      background: none;
+      border: 1.5px solid var(--blue-color);
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+      font-size: 1.1rem;
+      font-weight: bold;
+
+      &:hover {
+        background: var(--blue-color);
+        color: var(--white-color);
+      }
+    }
+  }
+`;

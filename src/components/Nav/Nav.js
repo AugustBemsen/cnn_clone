@@ -50,6 +50,7 @@ const NavStyles = styled.div`
     padding: 0.4rem 1rem;
     font-size: 1.2rem;
     font-weight: 600;
+    transition: all 0.3s ease-in-out;
 
     span {
       width: 10px;
@@ -58,6 +59,17 @@ const NavStyles = styled.div`
       background: var(--red-color);
       display: inline-block;
       margin-left: 0.5rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background: var(--red-color);
+      color: var(--white-color);
+      border: 1.2px solid var(--red-color);
+
+      span {
+        background: var(--white-color);
+      }
     }
   }
 
