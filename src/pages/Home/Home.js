@@ -18,7 +18,6 @@ const Home = () => {
         `https://gnews.io/api/v4/top-headlines?lang=en&country=us&token=${key}`
       )
       .then((res) => {
-        console.log(res.data?.articles);
         setNews(res.data?.articles);
         setLoading(false);
       })
