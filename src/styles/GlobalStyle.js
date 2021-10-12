@@ -15,10 +15,11 @@ const GlobalStyles = createGlobalStyle`
         --grey-color: #9389AC
     }
 
-    body {
+    html, body {
         font-family: 'Roboto', sans-serif;
         background: var(--white-color);
         color: var(--text-color);
+        scroll-behavior: smooth;
     }
 
     a {

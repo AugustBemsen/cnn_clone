@@ -1,114 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import images from "../../imgs";
 
-const NewsContent = () => {
+const NewsContent = ({ image, content, description }) => {
   return (
     <>
       <NewsContentStyles>
         <div className="new_img">
-          <img src={images.hero_bg} alt="news logo" />
+          <img src={image} alt="news logo" />
         </div>
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quae iste minima eligendi hic odio et. Hic modi eveniet amet
-            architecto quibusdam pariatur quod veniam quis, aspernatur ipsa
-            eaque, sequi eius consectetur voluptatem totam explicabo doloremque
-            expedita, culpa nihil optio obcaecati? Minima dolor, maxime ex
-            inventore quibusdam commodi blanditiis amet optio voluptatibus
-            repellat eligendi perspiciatis minus sequi soluta saepe laudantium
-            dignissimos! Eligendi, impedit sequi. Nam, a necessitatibus! Dolor,
-            magnam suscipit?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quae iste minima eligendi hic odio et. Hic modi eveniet amet
-            architecto quibusdam pariatur quod veniam quis, aspernatur ipsa
-            eaque, sequi eius consectetur voluptatem totam explicabo doloremque
-            expedita, culpa nihil optio obcaecati? Minima dolor, maxime ex
-            inventore quibusdam commodi blanditiis amet optio voluptatibus
-            repellat eligendi perspiciatis minus sequi soluta saepe laudantium
-            dignissimos! Eligendi, impedit sequi. Nam, a necessitatibus! Dolor,
-            magnam suscipit?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quae iste minima eligendi hic odio et. Hic modi eveniet amet
-            architecto quibusdam pariatur quod veniam quis, aspernatur ipsa
-            eaque, sequi eius consectetur voluptatem totam explicabo doloremque
-            expedita, culpa nihil optio obcaecati? Minima dolor, maxime ex
-            inventore quibusdam commodi blanditiis amet optio voluptatibus
-            repellat eligendi perspiciatis minus sequi soluta saepe laudantium
-            dignissimos! Eligendi, impedit sequi. Nam, a necessitatibus! Dolor,
-            magnam suscipit?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quae iste minima eligendi hic odio et. Hic modi eveniet amet
-            architecto quibusdam pariatur quod veniam quis, aspernatur ipsa
-            eaque, sequi eius consectetur voluptatem totam explicabo doloremque
-            expedita, culpa nihil optio obcaecati? Minima dolor, maxime ex
-            inventore quibusdam commodi blanditiis amet optio voluptatibus
-            repellat eligendi perspiciatis minus sequi soluta saepe laudantium
-            dignissimos! Eligendi, impedit sequi. Nam, a necessitatibus! Dolor,
-            magnam suscipit?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quae iste minima eligendi hic odio et. Hic modi eveniet amet
-            architecto quibusdam pariatur quod veniam quis, aspernatur ipsa
-            eaque, sequi eius consectetur voluptatem totam explicabo doloremque
-            expedita, culpa nihil optio obcaecati? Minima dolor, maxime ex
-            inventore quibusdam commodi blanditiis amet optio voluptatibus
-            repellat eligendi perspiciatis minus sequi soluta saepe laudantium
-            dignissimos! Eligendi, impedit sequi. Nam, a necessitatibus! Dolor,
-            magnam suscipit?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quae iste minima eligendi hic odio et. Hic modi eveniet amet
-            architecto quibusdam pariatur quod veniam quis, aspernatur ipsa
-            eaque, sequi eius consectetur voluptatem totam explicabo doloremque
-            expedita, culpa nihil optio obcaecati? Minima dolor, maxime ex
-            inventore quibusdam commodi blanditiis amet optio voluptatibus
-            repellat eligendi perspiciatis minus sequi soluta saepe laudantium
-            dignissimos! Eligendi, impedit sequi. Nam, a necessitatibus! Dolor,
-            magnam suscipit?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quae iste minima eligendi hic odio et. Hic modi eveniet amet
-            architecto quibusdam pariatur quod veniam quis, aspernatur ipsa
-            eaque, sequi eius consectetur voluptatem totam explicabo doloremque
-            expedita, culpa nihil optio obcaecati? Minima dolor, maxime ex
-            inventore quibusdam commodi blanditiis amet optio voluptatibus
-            repellat eligendi perspiciatis minus sequi soluta saepe laudantium
-            dignissimos! Eligendi, impedit sequi. Nam, a necessitatibus! Dolor,
-            magnam suscipit?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quae iste minima eligendi hic odio et. Hic modi eveniet amet
-            architecto quibusdam pariatur quod veniam quis, aspernatur ipsa
-            eaque, sequi eius consectetur voluptatem totam explicabo doloremque
-            expedita, culpa nihil optio obcaecati? Minima dolor, maxime ex
-            inventore quibusdam commodi blanditiis amet optio voluptatibus
-            repellat eligendi perspiciatis minus sequi soluta saepe laudantium
-            dignissimos! Eligendi, impedit sequi. Nam, a necessitatibus! Dolor,
-            magnam suscipit?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            quae iste minima eligendi hic odio et. Hic modi eveniet amet
-            architecto quibusdam pariatur quod veniam quis, aspernatur ipsa
-            eaque, sequi eius consectetur voluptatem totam explicabo doloremque
-            expedita, culpa nihil optio obcaecati? Minima dolor, maxime ex
-            inventore quibusdam commodi blanditiis amet optio voluptatibus
-            repellat eligendi perspiciatis minus sequi soluta saepe laudantium
-            dignissimos! Eligendi, impedit sequi. Nam, a necessitatibus! Dolor,
-            magnam suscipit?
-          </p>
+          <p>{description}</p>
+          <p>{content}</p>
         </div>
       </NewsContentStyles>
     </>

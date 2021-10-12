@@ -10,6 +10,25 @@ const NewsCard = ({ news }) => {
   const truncate = (str) =>
     str.length > 38 ? str.substring(0, 36) + "..." : str;
 
+  // handle news view
+  const saveHandler = () => {
+    const data = {
+      image: news?.image,
+      title: news?.title,
+      channel: news?.source?.name,
+      url: news?.source?.url,
+      date: news.publishedAt,
+      description: news.description,
+      content: news.content,
+    };
+    localStorage.setItem("savedNews", JSON.stringify(data));
+  };
+
+  const ctaHandler = (name) => {
+    saveHandler();
+    history.push(`/news/${name}`);
+  };
+
   return (
     <>
       <NewsCardStyles>
@@ -29,10 +48,7 @@ const NewsCard = ({ news }) => {
             <BsThreeDots id="icon" />
           </div>
         </div>
-        <div
-          className="card_group_1"
-          onClick={() => history.push("/news/2498234904")}
-        >
+        <div className="card_group_1" onClick={() => ctaHandler(news.title)}>
           <div className="text_div">
             <h3>{truncate(news.title)}</h3>
             <div className="inner_card_group">

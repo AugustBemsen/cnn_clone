@@ -1,26 +1,18 @@
+import moment from "moment";
 import React from "react";
 import styled from "styled-components";
 
-const Authors = () => {
+const Authors = ({ author, date, brand }) => {
   return (
     <>
       <AuthorsStyles>
         <span>By</span>
-        <span>Monica Serrone,</span>
-        <span>Monica Serrone,</span>
-        <span>Monica Serrone,</span>
-        <span>Monica Serrone,</span>
-        <span>Monica Serrone,</span>
-        <span>Monica Serrone,</span>
-        <span>Monica Serrone,</span>
-        <span>And</span>
-        <span>Monica Serrone,</span>
-        <span>CNN</span>
+        <span>{author},</span>
+        <span>{brand}</span>
       </AuthorsStyles>
       <AuthorsStyles>
         <span>Updated</span>
-        <span>01:34 PM EDT,</span>
-        <span>Sat August 28, 2021</span>
+        <span>{moment(date).format("LLLL")}</span>
       </AuthorsStyles>
     </>
   );

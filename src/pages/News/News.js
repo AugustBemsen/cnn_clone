@@ -4,6 +4,7 @@ import Nav from "../../components/Nav/Nav";
 import NewsBody from "../../parts/News/NewsBody";
 
 const News = () => {
+  window.scrollTo(0, 0);
   return (
     <>
       <NewsStyles>
