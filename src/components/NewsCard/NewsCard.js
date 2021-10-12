@@ -1,10 +1,12 @@
-import React from "react";
-import { BsHeart, BsThreeDots } from "react-icons/bs";
+import React, { useState } from "react";
+import { BsFillHeartFill, BsHeart, BsThreeDots } from "react-icons/bs";
 import { useHistory } from "react-router";
 import styled from "styled-components";
 
 const NewsCard = ({ news }) => {
   const history = useHistory();
+
+  const [liked, setLiked] = useState(false);
 
   //   shorten string
   const truncate = (str) =>
@@ -42,7 +44,12 @@ const NewsCard = ({ news }) => {
 
           <div className="inner_card_group">
             <div className="inner_card_group">
-              <BsHeart />
+              {liked ? (
+                <BsFillHeartFill onClick={() => setLiked(!liked)} />
+              ) : (
+                <BsHeart onClick={() => setLiked(!liked)} />
+              )}
+
               <p>234</p>
             </div>
             <BsThreeDots id="icon" />
