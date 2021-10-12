@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Loader from "../../components/Loader/Loader";
 import Nav from "../../components/Nav/Nav";
 import HomeBody from "../../parts/Home/Body";
 import Hero from "../../parts/Home/Hero";
@@ -27,7 +28,7 @@ const Home = () => {
   return (
     <>
       {loading ? (
-        <h1>Loading....</h1>
+        <Loader />
       ) : (
         <HomeStyles>
           <Nav />
