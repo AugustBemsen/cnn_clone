@@ -2,18 +2,23 @@ import React from "react";
 import { BsHeart, BsThreeDots } from "react-icons/bs";
 import { useHistory } from "react-router";
 import styled from "styled-components";
-import images from "../../imgs";
 
-const NewsCard = () => {
+const NewsCard = ({ news }) => {
   const history = useHistory();
+
+  //   shorten string
+  const truncate = (str) =>
+    str.length > 38 ? str.substring(0, 36) + "..." : str;
 
   return (
     <>
-      <NewsCardStyles onClick={() => history.push("/news/2498234904")}>
+      <NewsCardStyles>
         <div className="card_group">
           <div className="inner_card_group">
-            <h2>CNN News</h2>
-            <p>24 🔥</p>
+            <h2>
+              {news.source.name}
+              🔥
+            </h2>
           </div>
 
           <div className="inner_card_group">
@@ -24,21 +29,24 @@ const NewsCard = () => {
             <BsThreeDots id="icon" />
           </div>
         </div>
-        <div className="card_group_1">
+        <div
+          className="card_group_1"
+          onClick={() => history.push("/news/2498234904")}
+        >
           <div className="text_div">
-            <h3>Business incentives from minister of tech</h3>
+            <h3>{truncate(news.title)}</h3>
             <div className="inner_card_group">
               <span className="tags">finance</span>
               <span className="tags">technology</span>
             </div>
             <div className="inner_card_group">
-              <span className="cate">PSTK,</span>
+              {/* <span className="cate">PSTK,</span>
               <span className="cate">FLTW,</span>
-              <span className="cate">2 more,</span>
+              <span className="cate">2 more,</span> */}
             </div>
           </div>
           <div className="image_div">
-            <img src={images.hero_bg} alt="info" />
+            <img src={news.image} alt="info" />
           </div>
         </div>
       </NewsCardStyles>
@@ -52,7 +60,6 @@ const NewsCardStyles = styled.div`
   max-height: 252px;
   padding: 1.5rem;
   margin-bottom: 1rem;
-  cursor: pointer;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
 
@@ -76,7 +83,7 @@ const NewsCardStyles = styled.div`
 
     @media screen and (max-width: 500px) {
       font-size: 1rem;
-     }
+    }
   }
 
   .inner_card_group {
@@ -125,6 +132,7 @@ const NewsCardStyles = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    cursor: pointer;
   }
 
   .text_div {

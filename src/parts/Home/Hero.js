@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { BsHeart, BsThreeDots } from "react-icons/bs";
 import images from "../../imgs";
 
-const Hero = () => {
+const Hero = ({ news }) => {
   return (
     <>
       <HeroStyles>
         <div className="hero_group">
           <div className="inner_group">
-            <h1>CNN News</h1>
+            <h1>{news?.source?.name}</h1>
             <p>24 🔥</p>
           </div>
 
@@ -17,7 +17,7 @@ const Hero = () => {
             <BsThreeDots id="icon" />
           </div>
         </div>
-        <h3>Business incentives from minister of tech</h3>
+        <h3>{news?.title}</h3>
         <div className="hero_group">
           <div className="inner_group">
             <span>finance</span>
@@ -58,7 +58,7 @@ const HeroStyles = styled.div`
     padding-bottom: 1rem;
   }
 
-  @media screen and (max-width: 500px) { 
+  @media screen and (max-width: 500px) {
     padding: 2rem;
   }
 
@@ -70,7 +70,7 @@ const HeroStyles = styled.div`
 
     @media screen and (max-width: 500px) {
       margin-bottom: 1rem;
-     }
+    }
   }
 
   svg {
@@ -88,7 +88,7 @@ const HeroStyles = styled.div`
 
       @media screen and (max-width: 500px) {
         font-size: 1.2rem;
-       }
+      }
     }
 
     span {
@@ -100,7 +100,7 @@ const HeroStyles = styled.div`
       border-radius: 25px;
       margin-top: 2rem;
 
-      @media screen and (max-width: 500px) { 
+      @media screen and (max-width: 500px) {
         font-size: 1rem;
         padding: 0.7rem;
         margin-top: 1.3rem;
@@ -126,7 +126,7 @@ const HeroStyles = styled.div`
   #icon {
     font-size: 2.5rem;
 
-    @media screen and (max-width: 500px) { 
+    @media screen and (max-width: 500px) {
       font-size: 1.5rem;
     }
   }

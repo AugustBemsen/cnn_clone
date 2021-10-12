@@ -3,18 +3,15 @@ import styled from "styled-components";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import Title from "../../components/Title/Title";
 
-const HomeBody = () => {
+const HomeBody = ({ allNews }) => {
   return (
     <>
       <HomeBodyStyles>
         <Title children="Trending news" />
         <div className="news_group">
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
+          {allNews?.map((news, i) => (
+            <NewsCard news={news} key={i + 2} />
+          ))}
         </div>
         <div className="home_cta">
           <button>View All</button>
@@ -61,7 +58,6 @@ const HomeBodyStyles = styled.div`
     @media screen and (max-width: 789px) {
       margin-top: 3rem;
     }
-
 
     button {
       width: 250px;
