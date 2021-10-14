@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](https://www.loom.com/share/ade6058a298c4b5b8abd7c4c39336a3d?sharedAppSource=personal_library)
+![screenshot](https://cdn.loom.com/sessions/thumbnails/ade6058a298c4b5b8abd7c4c39336a3d-with-play.gif)
 
 Introduce your projects by taking a screenshot, video recordings or a gif. Try to tell us about the solution you built by answering the following:
 
